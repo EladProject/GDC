@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        
+        "target": "es6",
+        "checkJs": true,
+        "rootDirs": [
+            "lib"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
