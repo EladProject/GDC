@@ -1,6 +1,6 @@
-const GDCCollectorHttp = require('../../lib/gdc-collectors/http/gdc-collector-http');
-const GDCDataReceiver = require('../../lib/gdc-data-receivers/gdc-data-receiver');
-const GDCNotificationHandler = require('../../lib/gdc-notification-handlers/gdc-notification-handler');
+const GDCCollectorHttp = require('../gdc-collector-http');
+const {GDCDataReceiver} = require('@gdc-js/common');
+const {GDCNotificationHandler} = require('@gdc-js/common');
 const fs = require('fs');
 
 describe('Collect http', function() {
@@ -44,7 +44,7 @@ describe('Collect http', function() {
   const myNotificationHandler = new MyNotificationHadler();
 
   it('test http page', function(done) {
-    const expected = fs.readFileSync('spec/gdc-collector-http/itcorp.html', 'utf8');
+    const expected = fs.readFileSync('packages/gdc-collector-http/spec/itcorp.html', 'utf8');
     const httpCollector = new GDCCollectorHttp({
       properties: {},
       dataReceiver: new MyDataReceiver((data, meta) => {

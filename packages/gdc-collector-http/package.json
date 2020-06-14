@@ -1,8 +1,8 @@
 {
-  "name": "gdc-js",
-  "version": "1.0.0",
-  "description": "Generic data collector - JS",
-  "main": "index.js",
+  "name": "@gdc-js/gdc-collector-http",
+  "version": "0.5.0",
+  "description": "An http collector",
+  "main": "gdc-collector-http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,21 +11,22 @@
     "url": "git+https://github.com/EladProject/gdc-js.git"
   },
   "keywords": [
+    "http",
     "data",
-    "collection"
+    "collector"
   ],
   "author": "Elad Project",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EladProject/gdc-js/issues"
   },
   "homepage": "https://github.com/EladProject/gdc-js#readme",
   "dependencies": {
-    "ajv": "^6.12.2"
+    "@gdc-js/common": "file:../common"
   },
   "devDependencies": {
-    "jasmine": "^3.4.0",
     "eslint": "^6.8.0",
-    "eslint-config-google": "^0.13.0"
+    "eslint-config-google": "^0.13.0",
+    "jasmine": "^3.5.0"
   }
 }

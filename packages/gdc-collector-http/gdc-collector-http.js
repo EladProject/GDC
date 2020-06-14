@@ -1,4 +1,4 @@
-const GDCCollector = require('../gdc-collector');
+const {GDCCollector} = require('@gdc-js/common');
 const http = require('http');
 
 /**

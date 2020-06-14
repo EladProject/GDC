@@ -1,0 +1,8 @@
+The common package of the Generic Data Collection packages
+
+The modules includes the following:
+1) This package defines the base class for a collector (GDCCollector). Spcific collectors should derive from it.
+2) Common collector logic (implemented in the GDCCollector base class)
+3) Base class for data recievers and common data recievers
+4) Base class for notification handler and common notification handlers
+
