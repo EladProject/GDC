@@ -1,33 +1,32 @@
 const GDCCollectorHttpHttpsBase = require('./gdc-collector-http-https-base');
 
-
 /**
- * Http collector
+ * Https collector
  */
-class GDCCollectorHttp extends GDCCollectorHttpHttpsBase {
+class GDCCollectorHttps extends GDCCollectorHttpHttpsBase {
 
   /**
-     * Constructor
+     * Https collector constcutor
      * @param {*} conf
      */
   constructor(conf) {
     super(conf);
-    this.service = require('http');
+    this.service = require('https');
   }
 
   /**
-   * Prepend http
+   * Prepend https
    * @param {string} target
    * @return {string}
    */
   fixTarget(target) {
     // Add http:// prefix if no prefix supplied
-    if (!target.match(/^http:\/\/(\S+)/)) {
-      target = 'http://'+target;
+    if (!target.match(/^https:\/\/(\S+)/)) {
+      target = 'https://'+target;
     }
 
     return target;
   }
 }
 
-module.exports = GDCCollectorHttp;
+module.exports = GDCCollectorHttps;

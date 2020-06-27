@@ -25,8 +25,10 @@ class GDCCollector {
     this.validateConf(conf);
 
     this.properties = conf.properties;
-    this.notificationHanlder = conf.notificationHandler;
+    this.notificationHandler = conf.notificationHandler;
     this.dataReceiver = conf.dataReceiver;
+
+    this.progress = 0;
   }
 
   /**
@@ -61,7 +63,18 @@ class GDCCollector {
    * @param {*} targets - Collection targets
    */
   collect(targets) {
-    throw new Error('Method CollectorBase::collect is abstract');
+    this.progress = 0;
+    this.collectSpecific(targets);
+  }
+
+  /**
+   * The specific collection implementation of the derived class (the specific collector).
+   * This is the function that the derived classes need to implement to perform the collection
+   *
+   * @param {*} targets - Collection targets
+   */
+  collectSpecific(targets) {
+    throw new Error('Method CollectorBase::collectSpecific is abstract');
   }
 
   /**
