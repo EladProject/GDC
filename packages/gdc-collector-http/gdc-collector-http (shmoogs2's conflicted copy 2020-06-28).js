@@ -56,17 +56,17 @@ class GDCCollectorHttp extends GDCCollector {
       collectioStart: new Date(),
     };
 
-    this.notificationHandler.notification('Collecting ' + this.progress + ' of ' + this.numTargets + ' targets');
+    this.notificationHandler.receiveNotification('Collecting ' + this.progress + ' of ' + this.numTargets + ' targets');
 
     axios.get(target)
         .then((response) => {
           this.progress++;
           meta.collectionEnd = new Date();
           this.dataReceiver.receiveData(response.data, meta);
-          this.notificationHandler.progress(this.progress/this.numTargets);
+          this.notificationHandler.receiveProgress(this.progress/this.numTargets);
         })
         .catch((error) => {
-          this.notificationHandler.error(error);
+          this.notificationHandler.receiveError(error);
         });
   }
 }

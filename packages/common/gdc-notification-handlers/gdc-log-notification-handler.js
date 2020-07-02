@@ -5,19 +5,27 @@ const GDCNotificationHandler = require('./gdc-notification-handler.js');
  */
 class GDCLogNotificationHandler extends GDCNotificationHandler {
   /**
-     *
-     * @param {*} notification
-     */
-  receiveNotification(notification) {
-    console.log(notification);
+   *
+   * @param {*} notification
+   */
+  notification(notification) {
+    console.log('notification:' + notification);
   }
 
   /**
-       *
-       * @param {*} progress
-       */
-  receiveProgress(progress) {
-    console.log(progress);
+   *
+   * @param {*} progress
+   */
+  progress(progress) {
+    console.log('progress:' + progress);
+  }
+
+  /**
+   *
+   * @param {*} error
+   */
+  error(error) {
+    console.log('error:' + error);
   }
 }
 
