@@ -66,7 +66,7 @@ class GDCCollectorHttp extends GDCCollector {
           this.notificationHandler.progress(this.progress/this.numTargets);
         })
         .catch((error) => {
-          this.notificationHandler.error(error);
+          this.notificationHandler.error({'target': target, 'error': error});
         });
   }
 }

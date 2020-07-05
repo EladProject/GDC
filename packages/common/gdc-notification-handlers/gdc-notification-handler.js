@@ -17,7 +17,7 @@ class GDCNotificationHandler {
    * @param {*} notification
    */
   notification(notification) {
-    throw new Error('Method GDCNotificationHandler::receiveNotification is abstract');
+    throw new Error('Method GDCNotificationHandler::notification is abstract');
   }
 
   /**
@@ -25,7 +25,7 @@ class GDCNotificationHandler {
    * @param {*} progress - A number between 0 and 1 noting the progress of the collection
    */
   progress(progress) {
-    throw new Error('Method GDCNotificationHandler::receiveProgress is abstract');
+    throw new Error('Method GDCNotificationHandler::progress is abstract');
   }
 
   /**
@@ -33,7 +33,7 @@ class GDCNotificationHandler {
    * @param {*} progress - An error
    */
   error(progress) {
-    throw new Error('Method GDCNotificationHandler::receiveError is abstract');
+    throw new Error('Method GDCNotificationHandler::error is abstract');
   }
 }
 
