@@ -1,6 +1,6 @@
 {
   "name": "@gdc-js/common",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "The common package of the Generic Data Collector packages. Defines the standard interfaces and includes common data receivers and notification handlers",
   "main": "index.js",
   "scripts": {
