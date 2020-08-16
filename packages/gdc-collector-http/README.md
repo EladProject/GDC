@@ -1,4 +1,7 @@
-The http(s) data collector
+
+#The http(s) data collector
+
+A GDC module for collection of http(s) pages. Can collect multiple pages.
 
 Usage example:
 
@@ -16,6 +19,6 @@ const httpCollector = new GDCCollectorHttp({
       }),
       notificationHandler: new GDCLogNotificationHandler(),
     });
-httpCollector.collect(['http://www.iiiiiiii.com/index.html']);
+httpCollector.collect(['http://www.iiiiiiii.com/index.html', 'https://www.google.com/index.html']);
 
 </code></pre>

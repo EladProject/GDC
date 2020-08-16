@@ -20,8 +20,6 @@ class GDCCollector {
       throw TypeError('Cannot instantiate abstract class GDCCollector');
     }
 
-    this.ajv = new Ajv({allErrors: true, useDefaults: true});
-    this.validate = this.ajv.compile(this.getPropertiesSchema());
     this.validateConf(conf);
 
     this.properties = conf.properties;
@@ -89,12 +87,15 @@ class GDCCollector {
       throw new Error('Missing collector properties');
     }
 
-    const valid = this.validate(properties);
+    const ajv = new Ajv({allErrors: true, useDefaults: true});
+    const validate = ajv.compile(this.getPropertiesSchema());
+
+    const valid = validate(properties);
     if (valid) {
       return true;
     }
 
-    return false;
+    throw Error('Bad properties:' + ajv.errorsText(validate.errors));
   }
 
 

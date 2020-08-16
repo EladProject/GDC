@@ -1,7 +1,7 @@
 {
-  "name": "gdc-js",
-  "version": "1.0.0",
-  "description": "Generic data collector - JS",
+  "name": "@gdc-js/gdc-collector-ftp",
+  "version": "0.5.0",
+  "description": "An FTP generic data collector",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,23 +11,20 @@
     "url": "git+https://github.com/EladProject/gdc-js.git"
   },
   "keywords": [
+    "ftp",
     "data",
-    "collection"
+    "collector",
+    "wildcards",
+    "recursive"
   ],
   "author": "Elad Project",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EladProject/gdc-js/issues"
   },
   "homepage": "https://github.com/EladProject/gdc-js#readme",
   "dependencies": {
-    "@gdc-js/common": "^0.5.1",
-    "ajv": "^6.12.2",
-    "wild2wild_matcher": "^0.5.3"
-  },
-  "devDependencies": {
-    "jasmine": "^3.4.0",
-    "eslint": "^6.8.0",
-    "eslint-config-google": "^0.13.0"
+    "@gdc-js/common": "../common",
+    "basic-ftp": "^4.6.2",
   }
 }

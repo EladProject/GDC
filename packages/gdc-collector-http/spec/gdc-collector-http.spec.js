@@ -2,7 +2,6 @@ const GDCCollectorHttp = require('../gdc-collector-http');
 const {GDCCallbackDataReceiver} = require('@gdc-js/common');
 const {GDCLogNotificationHandler} = require('@gdc-js/common');
 const fs = require('fs');
-const {formatWithOptions} = require('util');
 
 describe('Collect http', function() {
 
