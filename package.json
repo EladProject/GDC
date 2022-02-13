@@ -22,7 +22,7 @@
   "homepage": "https://github.com/EladProject/gdc-js#readme",
   "dependencies": {
     "@gdc-js/common": "^0.5.1",
-    "ajv": "^6.12.2",
+    "ajv": "^6.12.3",
     "wild2wild_matcher": "^0.5.3"
   },
   "devDependencies": {
